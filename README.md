@@ -55,6 +55,14 @@ Necessário para o funcionamento das animações usadas pelo toastr.
 
 ```text
 src/
+	assets/
+		cadastro.png
+		cidade.png
+		editar.png
+		estado.png
+		inicio.png
+		lista.png
+		users.png
 	app/
 		app.config.ts
 		app.css
@@ -84,6 +92,9 @@ src/
 				lista.html
 				lista.spec.ts
 				lista.ts
+	index.html
+	main.ts
+	styles.css
 ```
 
 ## Organização por pasta
