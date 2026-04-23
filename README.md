@@ -235,8 +235,7 @@ https://agile-tweak-98318116.figma.site/
 
 ## Imagens do projeto
 
-![Tela inicial do Sistema de Cadastro de Pessoas](image.png)
-![Visão complementar da interface](image-1.png)
-![Listagem de pessoas cadastradas](image-2.png)
-![Formulário de cadastro de pessoa](image-3.png)
-![Detalhes e ações do cadastro](image-4.png)
+![Tela inicial do Sistema de Cadastro de Pessoas](src/assets/inicio.png)
+![Listagem de pessoas cadastradas](src/assets/lista.png)
+![Formulário de cadastro de pessoa](src/assets/cadastro.png)
+![Detalhes e ações do cadastro](src/assets/editar.png)
