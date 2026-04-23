@@ -2,19 +2,19 @@
 
 ## Sobre o projeto
 
-Este projeto e uma aplicacao web desenvolvida em Angular para cadastro e consulta de pessoas.
-O sistema consome uma API externa, exibe indicadores em cards, lista os registros cadastrados e oferece interacoes como busca, visualizacao de detalhes, cadastro e exclusao.
+Este projeto é uma aplicação web desenvolvida em Angular para cadastro e consulta de pessoas.
+O sistema consome uma API externa, exibe indicadores em cards, lista os registros cadastrados e oferece interações como busca, visualização de detalhes, cadastro e exclusão.
 
-O foco da aplicacao e entregar uma interface simples para gerenciamento de dados cadastrais, organizando as responsabilidades em componentes e paginas separados.
+O foco da aplicação é entregar uma interface simples para gerenciamento de dados cadastrais, organizando as responsabilidades em componentes e páginas separados.
 
 ## Funcionalidades
 
-- Exibicao de resumo com total de pessoas, cidades e estados.
+- Exibição de resumo com total de pessoas, cidades e estados.
 - Listagem de pessoas cadastradas.
 - Busca por nome, CPF e email.
 - Abertura de modal com detalhes da pessoa selecionada.
-- Abertura de formulario para novo cadastro.
-- Exclusao de registro com confirmacao em modal.
+- Abertura de formulário para novo cadastro.
+- Exclusão de registro com confirmação em modal.
 - Feedback visual com notificacoes usando toast.
 
 ## Tecnologias utilizadas
@@ -37,15 +37,15 @@ O projeto foi criado com Angular CLI e usa componentes standalone.
 
 ### HttpClient
 
-Utilizado para comunicacao com a API de pessoas.
+Utilizado para comunicação com a API de pessoas.
 
 ### FormsModule
 
-Usado para o binding dos campos do formulario e da busca.
+Usado para o binding dos campos do formulário e da busca.
 
 ### ngx-toastr
 
-Responsavel pelas notificacoes de sucesso e erro nas operacoes de cadastro e exclusao.
+Responsável pelas notificações de sucesso e erro nas operações de cadastro e exclusão.
 
 ### provideAnimationsAsync
 
@@ -86,38 +86,38 @@ src/
 				lista.ts
 ```
 
-## Organizacao por pasta
+## Organização por pasta
 
 ### `components`
 
-Contem partes reutilizaveis da interface.
+Contém partes reutilizáveis da interface.
 
-- `header`: cabecalho principal da aplicacao.
+- `header`: cabeçalho principal da aplicação.
 - `cards`: indicadores com totais carregados da API.
 
 ### `pages`
 
-Contem as areas principais da aplicacao.
+Contém as áreas principais da aplicação.
 
-- `lista`: listagem, busca, detalhes e exclusao.
-- `formulario`: cadastro de pessoa e reaproveitamento de dados para preenchimento.
+- `lista`: listagem, busca, detalhes e exclusão.
+- `formulário`: cadastro de pessoa e reaproveitamento de dados para preenchimento.
 
-### Arquivos principais da aplicacao
+### Arquivos principais da aplicação
 
 - `app.ts`: componente raiz.
 - `app.html`: estrutura principal da tela.
-- `app.config.ts`: configuracao global, providers, HttpClient e toastr.
-- `app.routes.ts`: configuracao de rotas. Atualmente esta vazio.
+- `app.config.ts`: configuração global, providers, HttpClient e toastr.
+- `app.routes.ts`: configuração de rotas. Atualmente está vazio.
 
-## Como a aplicacao funciona
+## Como a aplicação funciona
 
 ### Header
 
-Exibe o titulo do sistema e um texto de apoio no topo da pagina.
+Exibe o título do sistema e um texto de apoio no topo da página.
 
 ### Cards
 
-Faz requisicao para a API e calcula:
+Faz requisição para a API e calcula:
 
 - total de pessoas
 - total de cidades
@@ -126,19 +126,19 @@ Faz requisicao para a API e calcula:
 ### Lista
 
 Faz a leitura da API e mostra os registros em tabela.
-Tambem concentra as acoes principais:
+Também concentra as ações principais:
 
 - busca por texto
-- abertura do formulario
-- visualizacao de detalhes
-- confirmacao de exclusao
+- abertura do formulário
+- visualização de detalhes
+- confirmação de exclusão
 
-### Formulario
+### Formulário
 
-Responsavel pelo envio dos dados para cadastro de uma nova pessoa.
-Tambem consegue receber uma pessoa selecionada para preencher os campos da tela.
+Responsável pelo envio dos dados para cadastro de uma nova pessoa.
+Também consegue receber uma pessoa selecionada para preencher os campos da tela.
 
-## Integracao com API
+## Integração com API
 
 O projeto consome uma API Oracle ORDS no endpoint abaixo:
 
@@ -146,15 +146,15 @@ O projeto consome uma API Oracle ORDS no endpoint abaixo:
 https://gbebca2c3091cae-internshipdb1.adb.sa-saopaulo-1.oraclecloudapps.com/ords/estagio/pessoa/
 ```
 
-### Operacoes usadas atualmente
+### Operações usadas atualmente
 
 - `GET`: carregar lista de pessoas.
 - `POST`: cadastrar nova pessoa.
 - `DELETE`: remover pessoa pelo CPF.
 
-## Instalacao e execucao
+## Instalação e execução
 
-### 1. Instalar dependencias
+### 1. Instalar dependências
 
 ```bash
 npm install
@@ -172,7 +172,7 @@ Depois disso, acesse:
 http://localhost:4200/
 ```
 
-## Scripts disponiveis
+### Scripts disponíveis
 
 ### Iniciar servidor local
 
