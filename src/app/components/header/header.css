@@ -1,0 +1,50 @@
+/*main*/
+main{
+  margin: 0;
+}
+
+/*header*/
+header {
+  background: rgb(13, 203, 221);
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/*conteudo*/
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-left: 40px;
+}
+
+/*icone*/
+.icon {
+  width: 40px;
+  background:#5ccbc4;
+  padding: 8px;
+  border-radius: 10px;
+  position: relative;
+  left: 90px;
+}
+
+/*titulo*/
+.text h1 {
+  font-size: 28px;
+  margin: 0;
+  color: #1a1a1a;
+  position: relative;
+  left: 80px;
+  margin-bottom: 5px;
+
+}
+
+/*descricao*/
+.text p {
+  font-size: 14px;
+  margin: 0;
+  color: #1a1a1a;
+  position: relative;
+  left: 80px;
+  padding: 2px;
+}

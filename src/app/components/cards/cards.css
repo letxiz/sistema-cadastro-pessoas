@@ -1,0 +1,62 @@
+/*container*/
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/*card*/
+.card {
+  background: rgb(13, 203, 221);;
+  padding: 20px;
+  border-radius: 16px;
+  width: 300px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/*hover*/
+.card:hover{
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+  animation: normalize 0.3s ease;
+}
+
+
+/*texto*/
+.info p {
+  margin: 0;
+  color: black;
+  font-size: 14px;
+}
+
+.info h2 {
+  margin: 5px 0 0 0;
+  font-size: 28px;
+}
+
+
+/*icone*/
+.icon {
+  background: #e8f0fe;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.icon img {
+  width: 24px;
+}
+
+/*cores*/
+.icon.green {
+  background: #d4f5dd;
+}
+
+.icon.purple {
+  background: #eadcff;
+}

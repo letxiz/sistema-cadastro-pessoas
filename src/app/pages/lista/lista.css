@@ -1,0 +1,196 @@
+/* ===== TOP BAR ===== */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  gap: 15px;
+}
+
+/* ===== BUSCA ===== */
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: white;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+/* ===== BOTÃO ===== */
+.btn-nova {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-nova:hover {
+  background: #1d4ed8;
+}
+
+/* ===== TABELA ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background: #f5f6fa;
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+}
+
+td {
+  padding: 12px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+}
+
+tr:hover {
+  background: #f9f9f9;
+}
+
+/* ===== AÇÕES ===== */
+.acoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ÍCONES */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.icon svg {
+  fill: #6b7280;
+}
+
+.icon:hover {
+  background: #f3f4f6;
+}
+
+.icon.ativo svg {
+  fill: #16a34a;
+}
+
+/* EDITAR */
+.editar {
+  color: #2563eb;
+}
+
+/* DELETE */
+.delete svg {
+  fill: #dc2626;
+}
+
+.delete:hover {
+  background: #fee2e2;
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  background: white;
+  padding: 24px;
+  border-radius: 14px;
+  width: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal h2 {
+  margin-bottom: 15px;
+}
+
+.modal p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+/* FECHAR */
+.fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* ===== MODAL CONFIRMAÇÃO ===== */
+.modal-confirm {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.cancelar {
+  flex: 1;
+  background: #e5e7eb;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.confirmar {
+  flex: 1;
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.confirmar:hover {
+  background: #b91c1c;
+}

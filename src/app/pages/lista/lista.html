@@ -1,0 +1,121 @@
+<div class="top-bar">
+
+  <!--busca-->
+  <div class="search-box">
+    <span class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="#999">
+        <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
+      </svg>
+    </span>
+
+    <input
+      type="text"
+      placeholder="Buscar por nome, CPF, email ou cidade..."
+      [(ngModel)]="busca"
+      (input)="filtrar()"
+    />
+  </div>
+
+  <!--botao-->
+  <button class="btn-nova" (click)="abrirFormulario()">
+    + Nova Pessoa
+  </button>
+
+</div>
+
+<!--tabela-->
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Email</th>
+      <th>Cidade</th>
+      <th>Celular</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let p of pessoasFiltradas">
+
+    <td>{{ p.nome }}</td>
+    <td>{{ p.cpf }}</td>
+    <td>{{ p.email }}</td>
+    <td>{{ p.cidade }} - {{ p.estado }}</td>
+    <td>{{ p.celular }}</td>
+
+    <td class="acoes">
+
+      <!--detalhes-->
+      <span
+          (click)="verDetalhes(p); $event.stopPropagation()"
+          class="icon"
+           [class.ativo]="pessoaSelecionada === p"
+         >
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+          <path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680t-127.5 52.5Q300-575 300-500t52.5 127.5Q405-320 480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5Q588-545 588-500q0 45-31.5 76.5Q525-392 480-392ZM480-200q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Z"/>
+        </svg>
+      </span>
+
+      <!--editar-->
+      <span
+        (click)="editarPessoa(p); $event.stopPropagation()"
+        class="icon editar"
+      >
+        ✏️
+      </span>
+
+      <!--deletar-->
+      <span
+        (click)="abrirConfirmacao(p.cpf); $event.stopPropagation()"
+        class="icon delete"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+          <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Z"/>
+        </svg>
+      </span>
+
+    </td>
+
+  </tr>
+</tbody>
+
+<!--modal detalhes-->
+<div class="overlay" *ngIf="pessoaSelecionada">
+
+  <div class="modal">
+
+  <span class="fechar" (click)="fecharDetalhes()">✖</span>
+
+  <h2>{{ pessoaSelecionada.nome }}</h2>
+
+  <p><strong>CPF:</strong> {{ pessoaSelecionada.cpf }}</p>
+  <p><strong>RG:</strong> {{ pessoaSelecionada.rg }}</p>
+  <p><strong>Email:</strong> {{ pessoaSelecionada.email }}</p>
+  <p><strong>Celular:</strong> {{ pessoaSelecionada.celular }}</p>
+
+</div>
+</div>
+<div class="overlay" *ngIf="mostrarConfirmacao">
+
+  <div class="modal-confirm">
+
+    <h3>Excluir pessoa</h3>
+    <p>Tem certeza que deseja excluir?</p>
+
+    <div class="botoes">
+      <button class="cancelar" (click)="cancelarDelete()">Cancelar</button>
+      <button class="confirmar" (click)="confirmarDelete()">Excluir</button>
+    </div>
+
+  </div>
+
+</div>
+
+<!--formulario-->
+<app-formulario
+  *ngIf="mostrarFormulario"
+  [pessoaEditar]="pessoaParaEditar"
+  (fechar)="fecharFormulario()">
+</app-formulario>
