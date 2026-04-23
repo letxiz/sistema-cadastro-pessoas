@@ -3,7 +3,9 @@
 
     <!--header-->
     <div class="modal-header">
-      <h2>Nova Pessoa</h2>
+      <h2>
+        {{ pessoaEditar ? 'Editar Pessoa' : 'Nova Pessoa' }}
+      </h2>
       <span (click)="fecharFormulario()">×</span>
     </div>
 

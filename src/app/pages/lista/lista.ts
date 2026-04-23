@@ -37,19 +37,19 @@ export class Lista implements OnInit {
   }
 
   filtrar() {
-    if (!this.busca) {
-      this.pessoasFiltradas = this.pessoas.slice(0, 5);
-      return;
-    }
+  const termo = this.busca.toLowerCase();
 
-    this.pessoasFiltradas = this.pessoas
-      .filter(p =>
-        p.nome?.toLowerCase().includes(this.busca.toLowerCase()) ||
-        p.cpf?.includes(this.busca) ||
-        p.email?.toLowerCase().includes(this.busca.toLowerCase())
-      )
-      .slice(0, 5);
-  }
+  this.pessoasFiltradas = this.pessoas
+    .filter(p =>
+      p.nome?.toLowerCase().includes(termo) ||
+      p.cpf?.includes(termo) ||
+      p.rg?.includes(termo) ||
+      p.email?.toLowerCase().includes(termo) ||
+      p.cidade?.toLowerCase().includes(termo) ||
+      p.estado?.toLowerCase().includes(termo)
+    )
+    .slice(0, 5);
+}
 
   //deletar
   mostrarConfirmacao = false;
@@ -92,11 +92,13 @@ export class Lista implements OnInit {
 
   abrirFormulario() {
     this.mostrarFormulario = true;
+    this.pessoaParaEditar = null;
   }
 
   fecharFormulario() {
-    this.mostrarFormulario = false;
-    this.carregarPessoas();
+     this.mostrarFormulario = false;
+     this.pessoaParaEditar = null;
+     this.carregarPessoas();
   }
 
   verDetalhes(pessoa: any) {
@@ -109,10 +111,9 @@ export class Lista implements OnInit {
   }
 
   //editar
-  editarPessoa(pessoa: any) {
-  this.pessoaSelecionada = null; //fechar modal
+ editarPessoa(p: any) {
+  this.pessoaParaEditar = p;
   this.mostrarFormulario = true;
-  this.pessoaParaEditar = pessoa;
 }
 
 }

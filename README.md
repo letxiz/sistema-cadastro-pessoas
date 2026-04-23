@@ -1,4 +1,4 @@
-# Teste Pratico Tre
+# Sistema de Cadastro de Pessoas
 
 ## Sobre o projeto
 
@@ -15,7 +15,7 @@ O foco da aplicação é entregar uma interface simples para gerenciamento de da
 - Abertura de modal com detalhes da pessoa selecionada.
 - Abertura de formulário para novo cadastro.
 - Exclusão de registro com confirmação em modal.
-- Feedback visual com notificacoes usando toast.
+- Feedback visual com notificações usando toast.
 
 ## Tecnologias utilizadas
 
@@ -49,7 +49,7 @@ Responsável pelas notificações de sucesso e erro nas operações de cadastro 
 
 ### provideAnimationsAsync
 
-Necessario para o funcionamento das animacoes usadas pelo toastr.
+Necessário para o funcionamento das animações usadas pelo toastr.
 
 ## Estrutura do projeto
 
@@ -198,9 +198,9 @@ npm test
 npm run watch
 ```
 
-## Dependencias do projeto
+## Dependências do projeto
 
-### Dependencias principais
+### Dependências principais
 
 - `@angular/animations`
 - `@angular/common`
@@ -213,7 +213,7 @@ npm run watch
 - `rxjs`
 - `tslib`
 
-### Dependencias de desenvolvimento
+### Dependências de desenvolvimento
 
 - `@angular/build`
 - `@angular/cli`
@@ -223,12 +223,20 @@ npm run watch
 - `typescript`
 - `vitest`
 
-## Observacoes
+## Observações
 
 - O projeto utiliza componentes standalone.
-- A aplicacao depende da disponibilidade da API externa para carregar e enviar dados.
-- O arquivo de rotas existe, mas a navegacao por rotas ainda nao esta sendo usada.
+- A aplicação depende da disponibilidade da API externa para carregar e enviar dados.
+- O arquivo de rotas existe, mas a navegação por rotas ainda não está sendo usada.
 
-## Ideia visual usada como referencia
+## Referência visual
 
 https://agile-tweak-98318116.figma.site/
+
+## Imagens do projeto
+
+![Tela inicial do Sistema de Cadastro de Pessoas](image.png)
+![Visão complementar da interface](image-1.png)
+![Listagem de pessoas cadastradas](image-2.png)
+![Formulário de cadastro de pessoa](image-3.png)
+![Detalhes e ações do cadastro](image-4.png)
